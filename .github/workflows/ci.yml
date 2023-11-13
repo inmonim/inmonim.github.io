@@ -37,5 +37,8 @@ jobs:
       - name: Build Assets
         run: npm i && npm run build
 
+      - name: Bundler install
+        run: bundle install
+
       - name: Test Site
         run: bash tools/test
