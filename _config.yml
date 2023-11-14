@@ -16,10 +16,10 @@ timezone: Asia/Seoul
 
 title: Inmonim # the main title
 
-tagline: It's me! # it will display as the sub-title
+tagline: 틀린 내용이 있다면 얼마든지 지적해주세요! # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  Python을 좋아하는 개발자의 일기 및 정보 보관소입니다. Python은 물론, 프로그래밍 전반, 알고리즘과 AI, 기술 트렌드에 대한 정보도 읽어보세요.
+  Python을 좋아하는 개발자의 일기 및 정보 보관소입니다. Python은 물론, Java, C 등 프로그래밍 전반, 알고리즘과 AI, 기술 트렌드에 대한 정보도 다룹니다.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
