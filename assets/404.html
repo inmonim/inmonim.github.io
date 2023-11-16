@@ -4,11 +4,22 @@ title: "404: Page not found"
 permalink: /404.html
 
 redirect_from:
-  - /norobots/
-  - /assets/
-  - /posts/
+- /norobots/
+- /assets/
+- /posts/
 ---
 
 {% include lang.html %}
 
-<p class="lead">{{ site.data.locales[lang].not_found.statment }}</p>
+  {% if site.http404 != empty and site.http404 %}
+    {% capture http404_url %}
+      {% if jekyll.environment == 'development' %}
+        {{ site.http404 | relative_url }}
+      {% elsif site.img_cdn != empty and site.img_cdn %}
+        {{ site.http404 | prepend: site.img_cdn }}
+      {% else %}
+        {{ site.http404 | relative_url }}
+      {% endif %}
+    {% endcapture %}
+    <img src="{{ http404_url | strip }}" width="100%" alt="http404" onerror="this.style.display='none'">
+  {% endif %}
