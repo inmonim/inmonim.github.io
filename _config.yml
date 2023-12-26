@@ -35,7 +35,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Inmo-Jeong
-  email: cat10830142gmail.com # change to your email address
+  email: cat1083014@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     # - https://twitter.com/username # change to your twitter homepage
@@ -44,7 +44,7 @@ social:
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
-google_site_verification: # fill in to your verification string
+google_site_verification: uVN08wkWgcXZwXAiX4lLKccf_x14hODDNfrgNZ3uDN0
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
