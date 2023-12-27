@@ -308,7 +308,7 @@ image:
 ---
 ```
 
-> You can observe LQIP in the preview image of post [_Text and Typography_](/tips/text/).
+> You can observe LQIP in the preview image of post [_Text and Typography_](https://inmonim.github.io/tips/text/).
 
 
 For normal images:
