@@ -14,7 +14,7 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Inmonim # the main title
+title: Inmonim 개발로그 # the main title
 
 tagline: 틀린 내용이 있다면 얼마든지 지적해주세요! # it will display as the sub-title
 
