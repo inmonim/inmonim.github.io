@@ -10,6 +10,8 @@ categories: jekyll blog collections
 {: .prompt-tip }
 > **Jekyll 기반의 Git blog에서 정적 페이지의 변환 과정에 _posts 디렉토리 이외에도 <br> `빌드 시 추가로 포함시킬 디렉토리를 지정해주는 기능`이라 할 수 있겠다.**
 
+## ![핵심만 보고 싶으신 분들은 3-1로 이동하자](/posts/Jekyll-블로그-collections-_posts말고-다른-디렉토리에-글쓰기/#3-1-_posts-이외의-디렉토리-추가)
+
 ## **1. 공식 문서**
 
 <br>
