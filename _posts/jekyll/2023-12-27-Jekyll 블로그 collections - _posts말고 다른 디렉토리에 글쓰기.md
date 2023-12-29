@@ -10,7 +10,7 @@ categories: jekyll blog collections
 {: .prompt-tip }
 > **Jekyll 기반의 Git blog에서 정적 페이지의 변환 과정에 _posts 디렉토리 이외에도 <br> `빌드 시 추가로 포함시킬 디렉토리를 지정해주는 기능`이라 할 수 있겠다.**
 
-## ![핵심만 보고 싶으신 분들은 3-1로 이동하자](/posts/Jekyll-블로그-collections-_posts말고-다른-디렉토리에-글쓰기/#3-1-_posts-이외의-디렉토리-추가)
+## **[핵심만 보고 싶으신 분들은 3-1로 이동하자](/posts/Jekyll-블로그-collections-_posts말고-다른-디렉토리에-글쓰기/#3-1-_posts-이외의-디렉토리-추가)**
 
 ## **1. 공식 문서**
 
@@ -27,8 +27,6 @@ categories: jekyll blog collections
 <br>
 
 <hr>
-
-<br>
 
 
 ## **2. _posts 디렉토리의 포화**
@@ -59,9 +57,7 @@ GPT를 믿었던 내가 바보였다.
 
 <hr>
 
-<br>
-
-## 3. **Collections 사용**
+## **3. Collections 사용**
 
 Git blog 자체도 처음이기 때문에, liquid 엔진이나 chirpy 테마에서 만들어둔 서식들에 익숙해지고 싶었다.
 
@@ -74,13 +70,15 @@ _chirpy 테마를 처음 실행하면 보이는 화면이며, 4개의 튜토리�
 
 즉, 블로그에서 튜토리얼을 없애면 튜토리얼을 볼 수 없어진다는 것이다...
 
+**하지만 이 튜토리얼들이 내 블로그 포스팅 목록에서는 보이지 않게 만들고 싶다!**
+
 그래서 해당 팁들을
 
 1. _posts디렉토리가 아닌 다른 디렉토리로 분리하고 [#](/posts/Jekyll-블로그-collections-_posts말고-다른-디렉토리에-글쓰기/#3-1-_posts-이외의-디렉토리-추가)
 
-2. 포스팅 목록에서는 보이지 않지만 [#](/posts/Jekyll-블로그-collections-_posts말고-다른-디렉토리에-글쓰기/#3-2-포스팅-목록에서-숨기기)
+2. url을 통해서 접근할 수 있도록 만들 예정이었다. [#](/posts/Jekyll-블로그-collections-_posts말고-다른-디렉토리에-글쓰기/#3-3-접근할-수-있도록-url을-지정해주자)
 
-3. url을 통해서 접근할 수 있도록 만들 예정이었다. [#](/posts/Jekyll-블로그-collections-_posts말고-다른-디렉토리에-글쓰기/#3-3-접근할-수-있도록-url을-지정해주자)
+3. 포스팅 목록에 뜨지 않게 만드는 것은 상당히 쉬웠다.
 
 기회가 된다면 한국어로 번역해서 따로 올려보도록 해야지.
 
@@ -103,11 +101,11 @@ _후술하겠지만, 여기서 `2번 항목`이 해결되었다_
 #### 2. _config 파일로 접속해, collections를 추가(또는 수정) 해주자.
 
 ![collections](/assets/img/posting/collections.png)
+_위의 설정에서 볼 수 있듯, chirpy 테마에서는 `taps`, 즉 패키지에 포함된 `_taps` 디렉토리 또한 collections 기능을 통해 추가로 인식시킨 디렉토리인 것을 확인할 수 있다._
 
-*위의 설정에서 볼 수 있듯, chirpy 테마에서는 `taps`, 즉 패키지에 포함된 `_taps` 디렉토리 또한 collections 기능을 통해 추가로 인식시킨 디렉토리인 것을 확인할 수 있다.*
+위의 빨간 박스 안의 내용 처럼 추가해주자.
 
-위의 빨간 박스 안의 내용 처럼 추가해주자. **여기선 `_`를 삭제하여 넣자.**
-
+**여기선 `_`를 삭제하여 넣자.**
 
 > `output: true` 옵션은 **컨텐츠를 보여줄 것인가?**인데, 그냥 `true`로 설정해주자. <br>`false`는 해당 collection을 숨기는 것과 마찬가지다... ~~왜 있는 거야~~
 {: .prompt-info}
@@ -126,62 +124,42 @@ build 결과물인 `_site` 디렉토리를 확인해보면 아래와 같이 `tip
 >로컬 호스팅 환경에서 실행했을 때는, 127.0.0.1/{collection_title}/{file_title}로 접근할 수 있으나 <br>github에서 배포할 시에는 해당 방법을 통한 접근이 불가능하다.
 {: .prompt-warning}
 
-#### 3. 단순히 _posts 디렉토리 이외의 커스텀 디렉토리를 jekyll이 인식하게 만드는 것은 이것으로 끝이다!
-
-아래는 개인적으로 Jekyll 블로그를 이리저리 살펴보며 발견한 내역들이다... 굳이 읽을 필요는 없다.
-
+### **3-2. 접근할 수 있도록 URL을 지정해주자**
 
 <br>
 
-<hr>
+두 가지의 방법이 있다.
 
-<br>
+#### 1. 각각의 MD 파일마다 직접 링크를 달아주는 방법이 있다.
 
-### **3-2. 포스팅 목록에서 숨기기**
-
-<br>
-
->포스트 목록에 드러나지 않고 다른 포스팅과 상호작용(연관 포스트, 이전 또는 다음 포스트 등등)하지 않는 게시글을 작성할 수 있는 방법이기도 하다.
-{: .prompt-tip}
-
-**매우 간단하다. 포스팅 Markdown 파일의 타이틀 컨벤션을 지키지 않으면 된다.**
-
-![tips_directory](/assets/img/posting/_tips_directory.png)
-_이처럼 말이다_
-
-이렇게 할 경우, 포스트로 인식하지 못해 포스트로써 지원되는 기능들을 쓸 수 없고, 목록 및 모아보기에서도 제거된다.
-
-다만 유의할 점도 있는데,
-
-<br>
-
-**1. 해당 문서에만 존재하는 태그 및 카테고리를 YAML Front Matter에서 삭제해야 한다. <br>**
-  태그가 포함되거나 카테고리에 속한 포스트를 모아보는 기능이 있는 경우, <br>
-  태그와 카테고리는 존재하나 게시글은 없는 것으로 인식한다. <br>
-  이럴 경우 github 빌드 및 테스트에서 문제가 발생할 수 있다.
-
-<br>
-
-**2. 반드시 YAML Front Matter에서 layout을 설정해주어야 한다.<br>**
-  `_config`파일의 `defaults` 속성에서 `post`로 인식된 파일들은 기본적으로<br>
-  `layout: post`의 속성이 붙도록 설계되어 있다.<br>
-  포스팅 컨벤션을 지키지 않은 md파일은 layout 속성이 지정되지 않아<br>
-  해당 테마에서 설정한 형식의 레이아웃이 동봉된 HTML로 변환되지 않고,<br>
-  어떠한 레이아웃도 없는 MD파일만 덩그러니 정적파일로 변환되므로<br>
-  YAML Front Matter에서 직접 입력해주어야 한다.<br>
-
-**3. 반드시 permalink를 지정해주어야 한다.**
-
-<br>
-
-### **3-3. 접근할 수 있도록 URL을 지정해주자**
-
-<br>
-
-3-2의 3번 문제는 각각의 포스트(md파일)의 YAML Front Matter에서 해결할 수 있다.
+각각의 포스트(md파일)의 YAML Front Matter에서 해결할 수 있다.
 
 ![yamlfrontmatter](/assets/img/posting/yamlfrontmatter.png)
 
 `layout: post`와 같이, `permalink: {collection_title}/{file_title}`정도로 설정해주면 된다.
 
 이렇게 될 경우, 정적파일의 url이 명시적으로 생기기 때문에 포스팅 목록에 없어도 접근할 수 있게 된다!
+
+#### 2. _config에서 default 설정 변경을 통한 일괄 처리
+
+![default](/assets/img/posting/default.png)
+
+`type` 속성에 `_`를 제외한 collection의 이름을 넣어준 뒤,
+
+layout을 정해주고 YAML Front Matter처럼 공통으로 쓰일 URL을 지정해주면 된다.
+
+위의 `:title`의 경우, 각 MD 파일의 YAML Front Matter에 지정된 title 속성이 아니라,
+
+실제 MD 파일의 타이틀 (컨벤션을 지켰을 경우, 날짜를 제외한 파일의 제목)을 말한다!
+
+<br>
+
+---
+
+이것으로 `_posts` 디렉토리 이외의 커스텀 디렉토리를 Jekyll에게 인식시키고 들어가는 것이 끝났다.
+
+마지막으로, 기본적인 설정에 따르면 `_posts` 디렉토리 이외의 디렉토리에 존재하는 MD파일은
+
+`layout`이 `post`라고 해도 포스팅 목록에 포함되지 않는 모양이다!
+
+즉, 따로 해줄 것이 없다...

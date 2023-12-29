@@ -165,6 +165,12 @@ defaults:
       path: assets/js/dist
     values:
       swcache: true
+  - scope:
+      path: ""
+      type: tips
+    values:
+      layout: post
+      permalink: /tips/:title/
 
 sass:
   style: compressed
