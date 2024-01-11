@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Jekyll collections - _posts이외의 폴더에 글쓰기
+title: "[Jekyll] _posts 말고 다른 디렉토리에 글쓰기"
 date: 2023-12-27 16:44:18 +0900
 categories: jekyll blog collections
+tag: [Jekyll, Blog, 지킬]
 ---
 
 # Jekyll - Collections란?
@@ -10,7 +11,7 @@ categories: jekyll blog collections
 {: .prompt-tip }
 > **Jekyll 기반의 Git blog에서 정적 페이지의 변환 과정에 _posts 디렉토리 이외에도 <br> `빌드 시 추가로 포함시킬 디렉토리를 지정해주는 기능`이라 할 수 있겠다.**
 
-## **[핵심만 보고 싶으신 분들은 3-1로 이동하자](/posts/Jekyll-블로그-collections-_posts말고-다른-디렉토리에-글쓰기/#3-1-_posts-이외의-디렉토리-추가)**
+## **[핵심만 보고 싶으신 분들은 3-1로 이동하자](/posts/Jekyll-_posts-말고-다른-디렉토리에-글쓰기/#3-1-_posts-이외의-디렉토리-추가)**
 
 ## **1. 공식 문서**
 
@@ -74,9 +75,9 @@ _chirpy 테마를 처음 실행하면 보이는 화면이며, 4개의 튜토리�
 
 그래서 해당 팁들을
 
-1. _posts디렉토리가 아닌 다른 디렉토리로 분리하고 [#](/posts/Jekyll-블로그-collections-_posts말고-다른-디렉토리에-글쓰기/#3-1-_posts-이외의-디렉토리-추가)
+1. _posts디렉토리가 아닌 다른 디렉토리로 분리하고 [#](/posts/Jekyll-_posts-말고-다른-디렉토리에-글쓰기/#3-1-_posts-이외의-디렉토리-추가)
 
-2. url을 통해서 접근할 수 있도록 만들 예정이었다. [#](/posts/Jekyll-블로그-collections-_posts말고-다른-디렉토리에-글쓰기/#3-2-접근할-수-있도록-url을-지정해주자)
+2. url을 통해서 접근할 수 있도록 만들 예정이었다. [#](/posts/Jekyll-_posts-말고-다른-디렉토리에-글쓰기/#3-2-접근할-수-있도록-url을-지정해주자)
 
 3. 포스팅 목록에 뜨지 않게 만드는 것은 상당히 쉬웠다.
 
