@@ -8,7 +8,7 @@
   --highlighter-rouge-color: #c9def1;
   --highlight-lineno-color: #808080;
   --inline-code-bg: #323238;
-  --code-color: #b0b0b0;
+  --code-color: #8AD8F2;
   --code-header-text-color: #6a6a6a;
   --code-header-muted-color: #353535;
   --code-header-icon-color: #565656;
@@ -45,9 +45,11 @@
   .highlight .cd,
   .highlight .cm,
   .highlight .cpf,
-  .highlight .c1,
   .highlight .cs {
     color: #848484;
+  }
+  .highlight .c1 {
+    color: #6A9955;
   }
 
   .highlight .cp {
@@ -58,9 +60,11 @@
     color: #f4bf75;
   }
 
-  .highlight .o,
-  .highlight .ow {
+  .highlight .o {
     color: #d0d0d0;
+  }
+  .highlight .ow {
+    color: #C07BA4;
   }
 
   .highlight .p,
@@ -145,6 +149,14 @@
 
   .highlight .na {
     color: #6a9fb5;
+  }
+
+  .highlight .nb {
+    color: #4EBE83;
+  }
+
+  .highlight .nf {
+    color: #CECEA0;
   }
 
   .highlight .m,
