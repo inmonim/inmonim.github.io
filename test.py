@@ -1,12 +1,7 @@
-arr = [[2] for i in range(3)]
+a = 10
 
-new_arr = arr.copy()
+origin_list = [a, 5, 3]
 
-# new_arr[0][1]= 5
+print(origin_list)
 
-new_arr[0] = 5
-
-print(arr)
-print(new_arr)
-
-print(arr[0] is new_arr[0])
+print(origin_list[0] is a)
