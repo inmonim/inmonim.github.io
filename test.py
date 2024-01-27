@@ -1,18 +1,15 @@
-a = 10
+A = [[1, 2], ['X', 'Y']]
 
-origin_list = [a, 5, 3]
+B = A.copy()
 
-print(origin_list)
+print(A is B)
 
-print(origin_list[0] is a)
+# False
 
-b= 0
-a * b
+print(A[0] is B[0])
 
-int()
+# True
 
-def abc(a :int) -> int:
-    for i in range(a):
-        print(a)
+print(A[0][1] is B[0][1])
 
-# fdsafaafsdfads
+# True
