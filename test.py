@@ -3,7 +3,7 @@ A = [[1, 2], ['X', 'Y']]
 B = A.copy()
 
 print(A is B)
-
+1
 # False
 
 print(A[0] is B[0])
