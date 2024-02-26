@@ -36,7 +36,7 @@ tag: [Jekyll, Blog, 지킬]
 
 ~~사실 아직 제대로 작성한 포스팅도 없지만, jekyll 패키지를 열어본 순간부터 들었던 고민이었다.~~
 
-![_posts 폴더](/assets/img/posting/_posts_directory.png)
+![_posts 폴더](/posting/_posts_directory.png)
 
 ~~이 단 하나의 폴더 안에 앞으로의 모든 포스팅이 들어가야 한다는 것이다...~~
 
@@ -49,7 +49,7 @@ tag: [Jekyll, Blog, 지킬]
 >그냥 MD파일의 타이틀 컨벤션만 잘 지키면<br>`_posts`에 하위 디렉토리를 추가해도 정상적으로 인식 한다...
 {: .prompt-tip}
 
-![posts 계층](/assets/img/posting/tree.png)
+![posts 계층](/posting/tree.png)
 _그냥 하면 되는 거였다..._
 
 GPT를 믿었던 내가 바보였다.
@@ -64,7 +64,7 @@ Git blog 자체도 처음이기 때문에, liquid 엔진이나 chirpy 테마에�
 
 chirpy 테마는 친절하게 다양한 튜토리얼을 포스팅으로 만들어 두었다.
 
-![chirpy 튜토리얼](/assets/img/posting/chirpy_tutorial.png)
+![chirpy 튜토리얼](/posting/chirpy_tutorial.png)
 _chirpy 테마를 처음 실행하면 보이는 화면이며, 4개의 튜토리얼이 준비되어있다_
 
 해당 파일들은 chirpy 테마 위에서만 제대로 변환되기 때문에, vscode 등의 환경에서는 제대로 보이지 않는다.
@@ -94,14 +94,14 @@ _chirpy 테마를 처음 실행하면 보이는 화면이며, 4개의 튜토리�
 > 반드시 디렉토리 이름 앞에 `_`를 붙여줘야 인식할 수 있다.
 {: .prompt-info }
 
-![tips_directory](/assets/img/posting/_tips_directory.png)
+![tips_directory](/posting/_tips_directory.png)
 _후술하겠지만, 여기서 `2번 항목`이 해결되었다_
 
 <br>
 
 #### 2. _config 파일로 접속해, collections를 추가(또는 수정) 해주자.
 
-![collections](/assets/img/posting/collections.png)
+![collections](/posting/collections.png)
 _위의 설정에서 볼 수 있듯, chirpy 테마에서는 `taps`, 즉 패키지에 포함된 `_taps` 디렉토리 또한 collections 기능을 통해 추가로 인식시킨 디렉토리인 것을 확인할 수 있다._
 
 위의 빨간 박스 안의 내용 처럼 추가해주자.
@@ -118,7 +118,7 @@ _위의 설정에서 볼 수 있듯, chirpy 테마에서는 `taps`, 즉 패키�
 
 build 결과물인 `_site` 디렉토리를 확인해보면 아래와 같이 `tips`디렉토리와와 마크다운 파일들이 정적파일로 변환된 것을 확인할 수 있다.
 
-![site_tips](/assets/img/posting/_site.png)
+![site_tips](/posting/_site.png)
 
 하지만 이를 배포했을 때는, 호스팅할 url을 지정해주지 않아 해당 파일에 대한 접근이 사실상 불가능하다.
 
@@ -135,7 +135,7 @@ build 결과물인 `_site` 디렉토리를 확인해보면 아래와 같이 `tip
 
 각각의 포스트(md파일)의 YAML Front Matter에서 해결할 수 있다.
 
-![yamlfrontmatter](/assets/img/posting/yamlfrontmatter.png)
+![yamlfrontmatter](/posting/yamlfrontmatter.png)
 
 `layout: post`와 같이, `permalink: {collection_title}/{file_title}`정도로 설정해주면 된다.
 
@@ -143,7 +143,7 @@ build 결과물인 `_site` 디렉토리를 확인해보면 아래와 같이 `tip
 
 #### 2. _config에서 default 설정 변경을 통한 일괄 처리
 
-![default](/assets/img/posting/default.png)
+![default](/posting/default.png)
 
 `type` 속성에 `_`를 제외한 collection의 이름을 넣어준 뒤,
 
