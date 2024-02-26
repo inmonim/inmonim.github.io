@@ -176,7 +176,8 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/img/profile/manggom.png
+      image: /profile/manggom.png
+      img_path: /assets/img
 
 sass:
   style: compressed
