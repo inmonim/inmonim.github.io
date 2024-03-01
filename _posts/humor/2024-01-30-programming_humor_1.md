@@ -4,10 +4,10 @@ title: "[프로그래밍 유머] Python Antigravity module"
 date: 2024-03-01 13:35:00 +0900
 categories: humor
 tag: [programming humor]
-image: pr_h/python_antigravity.webp
+image: pr_h/python_antigravity.jpg
 ---
 
-![python antigravity](pr_h/python_antigravity.webp)
+![python antigravity](pr_h/python_antigravity.jpg)
 
 # 출처 : xkcd 353화
 
