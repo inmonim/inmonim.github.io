@@ -173,11 +173,23 @@ defaults:
     values:
       layout: post
       permalink: /tips/:title/
+  # algorithm
   - scope:
       path: _posts/algorithm
     values:
-      image: algorithm.png
-      img_path: /assets/img/thumb/
+      image: thumb/algorithm.png
+      img_path: /assets/img/
+  # phaha
+  - scope:
+      path: _posts/humor
+    values:
+      img_path: /assets/img/phaha/
+  # python
+  - scope:
+      path: _posts/python
+    values:
+      image: thumb/python.png
+      img_path: /assets/img/
 
 sass:
   style: compressed

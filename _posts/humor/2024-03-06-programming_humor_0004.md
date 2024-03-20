@@ -4,10 +4,10 @@ title: "[프로그래밍 유머] 프로도가 8명 있으면?"
 date: 2024-03-06 00:35:00 +0900
 categories: humor
 tag: [programming humor, 프로그래밍 유머, 코딩 유머, 코딩 밈]
-image: pr_h/git_branch_merge.png
+image: git_branch_merge.png
 ---
 
-![git_branch_merge_cola_mentos](pr_h/git_branch_merge.png)
+![git_branch_merge_cola_mentos](git_branch_merge.png)
 _출처 : 미상_
 
 # SUBTEXT

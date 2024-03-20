@@ -4,10 +4,10 @@ title: "[프로그래밍 유머] 판교 육교"
 date: 2024-03-02 20:35:00 +0900
 categories: humor
 tag: [programming humor, 프로그래밍 유머, 코딩 유머, 코딩 밈]
-image: pr_h/판교육교.jpg
+image: 판교육교.jpg
 ---
 
-![판교육교](pr_h/판교육교.jpg)
+![판교육교](판교육교.jpg)
 _출처 : 콘텐츠 내 표기_
 
 # SUBTEXT
