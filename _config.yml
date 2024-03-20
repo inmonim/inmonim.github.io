@@ -174,10 +174,10 @@ defaults:
       layout: post
       permalink: /tips/:title/
   - scope:
-      path: _posts
+      path: _posts/algorithm
     values:
-      image: profile/manggom.png
-      img_path: /assets/img/
+      image: algorithm.png
+      img_path: /assets/img/thumb/
 
 sass:
   style: compressed
