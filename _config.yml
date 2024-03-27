@@ -190,6 +190,11 @@ defaults:
     values:
       image: thumb/python.png
       img_path: /assets/img/
+  # history
+  - scope:
+      path: _posts/history
+    values:
+    img_path: /assets/img/
 
 sass:
   style: compressed
