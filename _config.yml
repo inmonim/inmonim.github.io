@@ -194,7 +194,7 @@ defaults:
   - scope:
       path: _posts/history
     values:
-    img_path: /assets/img/
+      img_path: /assets/img/
 
 sass:
   style: compressed
