@@ -18,7 +18,7 @@ author: inmonim
 
 title: Inmonim 개발로그 # the main title
 
-tagline: 틀린 내용이 있다면 얼마든지 지적해주세요! # it will display as the sub-title
+tagline: 개발이... 하고 싶어요...! # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   Python을 좋아하는 개발자의 일기 및 정보 보관소입니다. Python은 물론, Java, C 등 프로그래밍 전반, 알고리즘과 AI, 기술 트렌드에 대한 정보도 다룹니다.
@@ -184,6 +184,7 @@ defaults:
       path: _posts/humor
     values:
       img_path: /assets/img/phaha/
+      published: false
   # python
   - scope:
       path: _posts/python
