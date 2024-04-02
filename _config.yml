@@ -196,6 +196,11 @@ defaults:
       path: _posts/history
     values:
       img_path: /assets/img/
+  # pjt_phaha
+  - scope:
+      path: _posts/phaha
+    values:
+      img_path: /assets/img/
 
 sass:
   style: compressed
