@@ -2,7 +2,7 @@
 layout: post
 title: "[AWS] lightsail 서버와 가비아 도메인 연결하기"
 date: 2024-04-02 14:00:00 +0900
-categories: project, phaha
+categories: project phaha
 tag: [AWS, lightsail, 가비아, DNS]
 ---
 
