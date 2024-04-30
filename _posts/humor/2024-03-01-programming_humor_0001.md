@@ -4,10 +4,10 @@ title: "[프로그래밍 유머] Python Antigravity module"
 date: 2024-03-01 13:35:00 +0900
 categories: humor
 tag: [programming humor, 프로그래밍 유머, 코딩 유머, 코딩 밈]
-image: pr_h/python_antigravity.jpg
+image: python_antigravity.jpg
 ---
 
-![python antigravity](pr_h/python_antigravity.jpg)
+![python antigravity](python_antigravity.jpg)
 _출처 : xkcd 353화_
 
 # SUBTEXT
@@ -31,3 +31,5 @@ import antigravity
 물론 날아다닐 수는 없습니다.
 
 어떤 결과가 등장하는지는 직접 테스트해보시기 바랍니다!
+
+$$ Python $$
