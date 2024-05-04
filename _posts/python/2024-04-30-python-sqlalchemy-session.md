@@ -37,6 +37,8 @@ from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import DeclarativeBase
 
+# DB 연결 정보를 환경변수 또는 .env 같은 곳에서 받아오자.
+
 DB_URL = f'mysql+pymysql://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}'
 
 engine = create_engine(url=DB_URL)
@@ -48,7 +50,12 @@ app = FastAPI()
 @app.get('/')
 def hello():
     with Session() as db:
-        ...
+        db.query()...
+    # or
+    db = Session()
+    db.query()...
+    db.close()
+
     return ...
 ```
 
@@ -60,19 +67,27 @@ sessionmaker에 engine 정보를 config으로 담은 뒤, `call`하게 되면 �
 
 여기서 주의할 내용은,
 
-**Python 단에서 생성되고 사용을 마친 세션은 DB 상에서도 완전히 삭제되는 것이 아니다.**
+**Python 단에서 생성되고 사용을 마친 세션은 sqlalchemy나 DB 상에서 완전히 삭제되는 것이 아니다.**
 
-`sleep` 상태로 `Timeout` 시간까지 쭉 유지된다. (MySQL의 경우 기본적으로 3600초로 설정)
+python에서 정상적으로 세션 사용을 마친 경우(`db.close()` 또는 `with`문)에
 
-만약 새로운 요청이 들어올 경우, sleep 상태의 연결을 꺠워 재사용한다.
+python은 이 때 열어둔 세션을 `sleep`으로 두고, 다음 요청이 들어왔을 때 다시 사용하려 한다.
+
+DB에서는 해당 세션을 `sleep` 상태로 둔 뒤 `Timeout` 시간까지 쭉 유지된다. (MySQL의 경우 기본적으로 3600초로 설정)
+
+둘 다 세션을 완전히 삭제하지 않고 비활성 상태로 두는 것이다.
+
+새로운 요청이 들어올 경우, python과 db 모두 `sleep` 상태의 연결을 깨워 재사용한다.
 
 해당 session의 미사용 시간이 Timeout 시간을 넘겨 버리면 DB에서 session을 완전히 삭제해버린다.
 
+문제는 여기서 발생한다.
+
 SQLAlchemy가 사용할 수 있는 세션이 없음을 인지하고 있는 경우, 새 세션을 만들지만
 
-DB에서 timeout으로 세션을 닫아버리면 SQLAlchemy는 **새로운 요청을 보내기 전까진 세션이 닫혔는지 알 수 없다.**
+**DB에서 timeout으로 세션을 닫아버리면 SQLAlchemy는 새로운 요청을 보내기 전까진 세션이 닫혔는지 알 수 없다.**
 
-SQLAlchemy 입장에서는 '어 원래 다니던 길이 없어졌네' 하면서 주저 앉아버려 `500에러(DB는 10054)`를 반환한다.
+SQLAlchemy 입장에서는 '어 원래 다니던 길이 없어졌네' 하면서 주저 앉아버려 `DB는 10054에러`를 반환한다.
 
 <br>
 
