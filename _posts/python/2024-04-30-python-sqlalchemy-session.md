@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[python] SQLAlchemy를 통한 DB session 연결"
-date: 2024-01-29 17:15:18 +0900
+date: 2024-04-30 17:15:18 +0900
 categories: python python이론
 tag: [python, 파이썬, SQLAlchemy]
 ---
