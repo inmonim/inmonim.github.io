@@ -193,6 +193,6 @@ bonk_cat.__class__.avg_life_span = 50
 
 ![bonk_cat](/jjal/bonkcat.jpg)
 
-괜히 앞뒤 더블 언더스코어가 붙은 게 아니다.
-
 코드의 일관성과 가독성을 심히 망치고, Python의 의도를 완전히 비켜나가는 방법이다.
+
+setter를 만들어 쓰자.

@@ -9,7 +9,7 @@ tag: [python, python-version, 파이썬]
 # C != Computer Language
 
 > Computer 언어라서 C 언어 아님?
-{. :prompt-info}
+{: .prompt-warning}
 
 보통 프로그래밍을 배운 적 없는 사람들(또는 이런 잡다한 것에 관심없는 사람들)은 흔히 위와 같이 생각합니다.
 
