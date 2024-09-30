@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[python] SQLAlchemy - 10054 Error & 2006 Error"
-date: 2024-09-30 17:15:18 +0900
+date: 2024-09-30 17:15:18 +0000
 categories: python python이론
 tag: [python, 파이썬, SQLAlchemy]
 ---
