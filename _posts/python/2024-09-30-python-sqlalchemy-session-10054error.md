@@ -9,10 +9,10 @@ tag: [python, 파이썬, SQLAlchemy]
 # **SQLAlchemy + MySQL 10054 Error & MySQL 2006 Error**
 
 >Lost connection to MySQL system error: 10054 An existing connection was forcibly closed by the remote host
-{: .prompt-warning}
+{: .prompt-danger}
 
 >Error Code: 2006 - MySQL server has gone away
-{: .prompt-warning}
+{: .prompt-danger}
 
 SQLAlchemy와 FastAPI 또는 Flask를 활용하여 백엔드 서버를 구축할 때, 어쩌면 한 번쯤은 만났을 수도 있는 에러입니다.
 
