@@ -203,7 +203,7 @@ defaults:
       img_path: /assets/img/
   # trivia
   - scope:
-      path: _posts/trivia
+      path: _posts/programming_trivia
     values:
       img_path: /assets/img/trivia/
 
