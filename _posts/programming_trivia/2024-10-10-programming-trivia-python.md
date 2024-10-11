@@ -6,24 +6,24 @@ categories: programming_trivia
 tag: [python, 파이썬]
 ---
 
-![python-semi-colon](python_semicolon.jpg)
+![python-semi-colon](python_semicolon.jpg){: width="350px"}
 _세미콜론없다고ㅋㅋㅋㅋㅋㅋ_
 
 프로그래밍의 역사에서 가끔 천재들이 심심해서 나온 것들이 있습니다.
 
-![tovals_f](tovalds_f.webp)
+![tovals_f](torvalds_f.webp){: width="350px"}
 _Nvidia를 향해 엿을 날리는 리누스 토발즈_
 
 이 아저씨가 만든 `linux`와 `Git`이나 오늘 이야기할
 
 # 근본 웃음벨 Python 입니다.
 
-![monty_python](monty_python.jpeg)
+![monty_python](monty_python.jpeg){: width="350px"}
 _진짜 파이썬 맞습니다_
 
 Python은 현재 2018년 은퇴를 번복하고 MS에서 Python 개발을 맡고 있는 귀도 반 로섬에 의해 창시되었습니다.
 
-![quido](quido.jpeg)
+![guido](guido.jpeg){: width="350px"}
 _귀도 반 로섬(Guido van rossum, 1956~, 네덜란드)_
 
 대학시절부터 엘리트였던 귀도는 암스테르담 대학교에서 수학과 컴퓨터 과학을 공부하였으며
@@ -34,7 +34,7 @@ _귀도 반 로섬(Guido van rossum, 1956~, 네덜란드)_
 
 2년 후인 1991년, `Python 1.0`이 탄생했습니다.
 
-![python-hatchling](python-hatchling.jpeg)
+![python-hatchling](python-hatchling.jpeg){: width="350px"}
 _파이썬이 탄생하는 역사적 광경입니다_
 
 취미로 만든 언어다보니, 언어 자체에 많은 유머가 함축되어 있습니다.
@@ -43,7 +43,7 @@ _파이썬이 탄생하는 역사적 광경입니다_
 
 Python의 로고는 비단뱀(학명: Pythonidae, 영명 : Python)을 형상화해서 만들었습니다.
 
-![quido](python_python.jpeg)
+![quido](python_python.jpeg){: width="350px"}
 _근데 얘가 비단뱀이 맞긴 한가?_
 
 대체 왜 프로그래밍 언어가 뱀으로부터 시작했지? 싶지만, 개발자가 이름 대충 짓는 건 예삿일이니 그런갑다 하겠죠.
@@ -52,13 +52,13 @@ _근데 얘가 비단뱀이 맞긴 한가?_
 
 진짜 이름의 유래는
 
-![quido](monty_python2.jpg)
+![quido](monty_python2.jpg){: width="350px"}
 
 영국의 6인조 코미디 그룹 몬티 파이선(발음 상 파에톤, 파이튼 등으로도 불립니다)으로부터 유래했습니다.
 
 유명한 작품으로는 전설적인 코미디 영화 몬티 파이선의 성배가 있습니다.
 
-![quido](holy_grail.jpg)
+![quido](holy_grail.jpg){: width="350px"}
 _진짜 50년 지난 지금 봐도 꿀잼입니다_
 
 즉, Python이라는 작명부터가 근본 웃음벨인 것이죠.
@@ -183,14 +183,14 @@ _'중괄호와 세미콜론이 필수적인' 언어_ 이기 때문이죠.
 
 이 때문에 파이썬은 C계열, JAVA 개발자들에게 웃음벨로 통하곤 합니다.
 
-![leaning_python_after_c++](leaning_python_after_c++.jpg)
+![leaning_python_after_c++](leaning_python_after_c++.jpg){: width="350px"}
 _제가 C++을 배우지 않는 이유입니다._
 
-![im_using_python](im_using_python.webp)
+![im_using_python](im_using_python.webp){: width="350px"}
 _Python 개발자는 땀흘릴 일이 없기 때문이죠_
 
 그럼에도 파이썬은 현재 매우 사랑받은 언어임이 틀림없습니다.
 
 작고(사실 겁나 큼) 소중한 우리의 언어, 파이썬이 꼭 사랑받았으면 합니다.
 
-![using_the_python](using_the_python.jpg)
+![using_the_python](using_the_python.jpg){: width="350px"}
