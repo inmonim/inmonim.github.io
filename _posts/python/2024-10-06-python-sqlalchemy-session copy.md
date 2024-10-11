@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[python] SQLAlchemy - session.close()"
-date: 2024-09-30 06:15:18 +0900
+date: 2024-10-06 18:15:18 +0900
 categories: python python이론
 tag: [python, 파이썬, SQLAlchemy]
 ---

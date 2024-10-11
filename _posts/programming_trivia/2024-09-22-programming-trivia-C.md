@@ -2,8 +2,8 @@
 layout: post
 title: "C언어는 Computer 언어가 아님."
 date: 2024-09-22 16:44:18 +0900
-categories: C trivia
-tag: [python, python-version, 파이썬]
+categories: programming_trivia
+tag: [C, programming_history]
 ---
 
 # C != Computer Language
