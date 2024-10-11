@@ -201,6 +201,11 @@ defaults:
       path: _posts/phaha
     values:
       img_path: /assets/img/
+  # trivia
+  - scope:
+      path: _posts/trivia
+    values:
+      img_path: /assets/img/trivia/
 
 sass:
   style: compressed
