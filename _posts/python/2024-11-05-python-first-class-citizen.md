@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "1급 객체? (First-class citizen)"
-date: 2024-11-01 05:00:00 +0900
+title: "[Python]1급 객체? (First-class citizen)"
+date: 2024-11-05 05:00:00 +0900
 categories: python python이론
 tag: [python, 파이썬]
 ---
