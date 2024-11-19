@@ -38,7 +38,7 @@ SQLAlchemy는 DB와의 통신을 위해 `Connection Pooling` 방식을 사용합
 
 요청마다 Pool에 존재하는 Connection을 가져와 사용하는 것입니다.
 
-요청이 정상적으로 수행되고 session을 close()하면 Connection은 다시 Pool로 반환됩니다.
+요청이 정상적으로 수행되고 session을 `close()`하면 `Connection`은 다시 `Pool`로 반환됩니다.
 
 마치 프로세스가 CPU를 점유하는 것처럼, session은 Connection을 점유하는 것입니다.
 
@@ -50,7 +50,7 @@ SQLAlchemy는 DB와의 통신을 위해 `Connection Pooling` 방식을 사용합
 
 이번 포스팅에서는 `2번 문제`를 다루도록 하겠습니다.
 
-**## Connection의 유지 기간**
+## **Connection의 유지 기간**
 
 먼저, SQLAlchemy의 Connection의 특징을 짚고 넘어가겠습니다.
 
@@ -93,7 +93,7 @@ DB는 이미 폐기한 Connection을 SQLAlchemy가 사용했기 때문에
 
 먼저 **SQLAlchemy 단에서 해결**하는 방법입니다.
 
-### 1. pool_pre_ping
+### **1. pool_pre_ping**
 
 ```python
 engine = create_engine("mysql+pymysql://user:pw@host/db", pool_pre_ping=True)
@@ -119,7 +119,7 @@ engine = create_engine("mysql+pymysql://user:pw@host/db", pool_recycle=3600)
 
 이 방법이 가장 좋은 방법이라 생각합니다.
 
-**### 3. 크론잡/배치를 활용한 강제 갱신**
+### **3. 크론잡/배치를 활용한 강제 갱신**
 
 DB의 Connection timeout이 일어나기 전, 크론잡 등을 활용해 자동으로 쿼리를 던져 커넥션을 갱신하는 방식입니다.
 
@@ -127,7 +127,7 @@ DB의 Connection timeout이 일어나기 전, 크론잡 등을 활용해 자동�
 
 개인적으로는 2번 방법을 선호하는 편입니다.
 
-### 1. wait_timeout 설정
+### **4. wait_timeout 설정**
 
 ```sql
 SHOW VARIABLES LIKE 'wait_timeout';
