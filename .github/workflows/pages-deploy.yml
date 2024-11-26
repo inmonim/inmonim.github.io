@@ -82,15 +82,18 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+      
+      - name: Set up service account key
+        run: echo "${{ secrets.GSC_SERVICE_ACCOUNT_KEY }}" > key.json
+      
+      - name: Authenticate with GCP
+        run: gcloud auth activate-service-account --key-file=key.json
         
-      - name: Notify Google Search Console
-        env:
-          GSC_API_KEY: ${{ secrets.GSC_API_KEY }}
-          SITE_URL: ${{ secrets.SITE_URL }}
+      - name: Trigger Google Search Console API
         run: |
-          echo "${GSC_API_KEY}" > key.json
+          ACCESS_TOKEN=$(gcloud auth application-default print-access-token)
           curl -X POST \
             -H "Content-Type: application/json" \
-            -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" \
-            -d '{"siteUrl": "'${SITE_URL}'", "feedpath": "/sitemap.xml"}' \
-            "https://searchconsole.googleapis.com/v1/urlTestingTools/mobileFriendlyTest:run"
+            -H "Authorization: Bearer $ACCESS_TOKEN" \
+            -d '{"siteUrl": "'${{ secrets.SITE_URL }}'", "feedpath": "/sitemap.xml"}' \
+            "https://searchconsole.googleapis.com/v1/sites/${{ secrets.SITE_URL }}/sitemaps"
