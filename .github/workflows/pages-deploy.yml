@@ -33,7 +33,10 @@ jobs:
           # submodules: true
           # If using the 'assets' git submodule from Chirpy Starter, uncomment above
           # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
-          
+      - name: Deploy to GitHub Pages
+        run: |
+          echo "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'>" > .nojekyll
+        
       - name: Clear Bundler cache
         uses: actions/cache@v2
         with:
@@ -64,12 +67,6 @@ jobs:
         env:
           JEKYLL_ENV: "production"
 
-      # - name: Test site
-      #   run: |
-      #     bundle exec htmlproofer _site \
-      #       \-\-disable-external=true \
-      #       \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
-
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v1
         with:
@@ -85,3 +82,15 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        
+      - name: Notify Google Search Console
+        env:
+          GSC_API_KEY: ${{ secrets.GSC_API_KEY }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+        run: |
+          echo "${GSC_API_KEY}" > key.json
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" \
+            -d '{"siteUrl": "'${SITE_URL}'", "feedpath": "/sitemap.xml"}' \
+            "https://searchconsole.googleapis.com/v1/urlTestingTools/mobileFriendlyTest:run"
