@@ -84,7 +84,7 @@ jobs:
         uses: actions/deploy-pages@v2
       
       - name: Set up service account key
-        run: echo "${{ secrets.GSC_SERVICE_ACCOUNT_KEY }}" | jq . > key.json
+        run: echo "${{ secrets.GSC_SERVICE_ACCOUNT_KEY }}" >> key.json
       
       - name: Authenticate with GCP
         run: gcloud auth activate-service-account --key-file=key.json
