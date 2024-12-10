@@ -343,6 +343,7 @@ h1 + .post-meta {
 @media all and (max-width: 768px) {
   .content > p > img {
     max-width: calc(100% + 1rem);
+    width: 350px
   }
 }
 
